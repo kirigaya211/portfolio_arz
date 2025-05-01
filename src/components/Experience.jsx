@@ -1,4 +1,4 @@
-import Internship from "../assets/Internship.png";
+import Internship from "../assets/internship.png";
 import Procurement from "../assets/Procurement.jpg";
 import Facility from "../assets/facility.jpg";
 import Lefi from "../assets/Lefi.jpg";
