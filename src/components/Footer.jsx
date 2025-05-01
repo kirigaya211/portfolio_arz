@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="flex justify-center space-x-6">
     
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/kirigaya211"
             target="_blank"
             rel="noreferrer"
             className="hover:text-white transition-transform transform hover:scale-110"
@@ -41,7 +41,7 @@ export default function Footer() {
   
        
           <a
-            href="https://discord.com/users/yourDiscordID"
+            href="https://discordapp.com/users/838653563147911228"
             target="_blank"
             rel="noreferrer"
             className="hover:text-white transition-transform transform hover:scale-110"
