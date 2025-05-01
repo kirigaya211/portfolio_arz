@@ -3,7 +3,7 @@ import profile from "../assets/prof.png";
 
 export default function Hero() {
     return (
-      <section className="min-h-screen flex flex-col justify-center items-center text-white bg-[#0F0F1C] px-4 text-center relative">
+      <section id="about" className="min-h-screen flex flex-col justify-center items-center text-white bg-[#0F0F1C] px-4 text-center relative mt-15">
     
         <div className="relative">
           <div className="absolute inset-0 rounded-full bg-purple-700 blur-2xl opacity-40 w-76 h-76 m-auto animate-pulse" />

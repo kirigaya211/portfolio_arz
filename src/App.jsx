@@ -8,7 +8,9 @@ import Skills from "./components/Skills";
 function App() {
   return (
     <div className="font-sans bg-[#0F0F1C]">
-      <Navbar />
+      <div className="sticky top-0 z-50">
+        <Navbar />
+      </div>
       <Hero />
       <Experience />
       <Skills />
