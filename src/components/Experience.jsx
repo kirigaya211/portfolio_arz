@@ -1,7 +1,3 @@
-// import Internship from "../assets/internship.png";
-// import Procurement from "../assets/Procurement.jpg";
-// import Facility from "../assets/facility.jpg";
-// import Lefi from "../assets/Lefi.jpg";
 import React, { useState, useEffect } from "react";
 
 export default function Experience() {
@@ -47,7 +43,7 @@ export default function Experience() {
             className="relative group bg-gradient-to-br from-purple-800 to-[#130428] rounded-xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 flex justify-around"
           >
             <img
-              src={job.icon?.url || Internship}
+              src={job.icon}
               alt={`${job.title} icon`}
               className="mr-10 w-20 h-20 object-cover rounded-lg"
             />

@@ -1,7 +1,3 @@
-// import CoffeeShop from "../assets/projects/coffeeshop.png";
-// import dMinting from "../assets/projects/dMinting.jpg";
-// import Osas from "../assets/projects/osas.jpg";
-// import ECommerce from "../assets/projects/ecommerce.png";
 import React, {useState, useEffect} from "react";
 
 export default function Projects() {
@@ -50,7 +46,7 @@ export default function Projects() {
               <div className="relative md:w-1/2 w-full flex justify-center">
                 <div className="absolute w-78 h-78 rounded-full bg-purple-700 blur-2xl opacity-40 animate-pulse top-1/2 -translate-y-1/2" />
                 <img
-                  src={p.image?.url}
+                  src={p.image}
                   alt={p.title}
                   className="relative z-10 w-1/3 max-w-sm object-contain"
                 />
