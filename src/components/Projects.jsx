@@ -1,35 +1,34 @@
-import CoffeeShop from "../assets/projects/coffeeshop.png";
-import dMinting from "../assets/projects/dMinting.jpg";
-import Osas from "../assets/projects/osas.jpg";
-import ECommerce from "../assets/projects/ecommerce.png";
+// import CoffeeShop from "../assets/projects/coffeeshop.png";
+// import dMinting from "../assets/projects/dMinting.jpg";
+// import Osas from "../assets/projects/osas.jpg";
+// import ECommerce from "../assets/projects/ecommerce.png";
+import React, {useState, useEffect} from "react";
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "☕ Coffee Shop App (Flutter)",
-      desc: "A sleek and responsive mobile app designed for a modern coffee shop, built using Flutter.Users can browse the full menu, view product details, customize their orders, and add items to a cart.",
-      image: CoffeeShop,
-      url: "https://github.com/kirigaya211/Flutter_CoffeeShop",
-    },
-    {
-      title: "🛒 E-Commerce App (Flutter)",
-      desc: "A fully responsive and intuitive mobile shopping app developed with Flutter, tailored for small to mid-sized online stores. The app offers a smooth and engaging user experience from product discovery to checkout.",
-      image: ECommerce,
-      url: "https://github.com/kirigaya211/Flutter_ECommerce",
-    },
-    {
-      title: "🎓 Student Organization Accreditation System (Laravel)",
-      desc: "A web-based system developed using the Laravel PHP framework to streamline the accreditation and reaccreditation process of student organizations within an academic institution.",
-      image: Osas,
-      url: "https://github.com/kirigaya211/osas",
-    },
-    {
-      title: "NFT Minting dApp (EVM-Compatible)",
-      desc: "A lightweight decentralized minting application built for EVM-compatible blockchains. Users can connect their wallet and mint NFTs directly from the smart contract via a simple and intuitive UI.",
-      image: dMinting,
-      url: "https://github.com/kirigaya211/minting_dApp",
-    },
-  ];
+  const [projects, setProjects] = useState([]);
+  const [message, setMessage] = useState("");
+
+  useEffect(()=>{
+    const fetchProjects = async()=>{
+      try{
+        const response = await fetch("https://x8ki-letl-twmt.n7.xano.io/api:tuXupQl5/projects");
+
+        if(!response.ok){
+          setMessage("An error occured while fetching project list");
+          return;
+        }
+
+        const data = await response.json();
+        setProjects(data);
+      }catch(error){
+        console.error("Error fetching projects:", error);
+        setMessage("Failed to fetch project list. Please try again");
+      }
+    };
+
+    fetchProjects();
+  },[]);
+  
 
   return (
     <section id="projects" className="py-12 px-4">
@@ -51,7 +50,7 @@ export default function Projects() {
               <div className="relative md:w-1/2 w-full flex justify-center">
                 <div className="absolute w-78 h-78 rounded-full bg-purple-700 blur-2xl opacity-40 animate-pulse top-1/2 -translate-y-1/2" />
                 <img
-                  src={p.image}
+                  src={p.image?.url}
                   alt={p.title}
                   className="relative z-10 w-1/3 max-w-sm object-contain"
                 />
