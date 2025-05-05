@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion"; 
 
 export default function Experience() {
   const [jobs, setJobs] = useState([]);
@@ -27,11 +28,16 @@ export default function Experience() {
   }, []);
 
   return (
-    <section id="work" className="py-12 px-4">
-      <h2 className="text-4xl font-semibold mb-6 text-center text-white">
-        Work Experience
-      </h2>
-
+    <section id="work" className="scroll-mt-15 py-12 px-4">
+      <motion.h2
+          className="text-4xl font-semibold mb-6 text-center text-white"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        >
+         Work Experience
+        </motion.h2>
       {message && (
         <p className="text-center text-red-400 mb-4">{message}</p>
       )}

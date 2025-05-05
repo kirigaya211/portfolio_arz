@@ -11,7 +11,6 @@ export default function Navbar() {
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         <h1 className="text-2xl font-extrabold tracking-widest text-purple-400">ARZ</h1>
 
-        {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-lg">
           <li><a href="#about" className="hover:text-purple-400 transition">About</a></li>
           <li><a href="#work" className="hover:text-purple-400 transition">Work</a></li>
