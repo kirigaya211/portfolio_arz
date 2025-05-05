@@ -28,7 +28,7 @@ export default function Hero() {
         </div>
 
         <motion.p
-          className="text-xl text-gray-300 mb-1 text-center md:text-left"
+          className="text-2xl text-gray-300 mb-1 text-center md:text-left font-preah"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -47,7 +47,7 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
       >
         <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug font-preah"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -60,7 +60,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="text-sm md:text-base text-gray-400 italic"
+          className="text-base md:text-lg text-gray-400 italic"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: false }}

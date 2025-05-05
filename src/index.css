@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
+
+
 html {
     scroll-behavior: smooth;
   }
-  
+
+.font-preah {
+    font-family: 'Preahvihear', sans-serif;
+  }
